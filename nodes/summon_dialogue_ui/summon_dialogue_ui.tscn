@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://crklsgmmmlobx"]
+
+[ext_resource type="Script" path="res://nodes/summon_dialogue_ui/summon_dialogue_ui.gd" id="1_yukqc"]
+
+[node name="SummonDialogueUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yukqc")
+
+[node name="DialogueText" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -448.0
+offset_top = -264.0
+offset_right = 448.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Let's begin..."
+
+[node name="DefyButton" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -448.0
+offset_top = -72.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Defy"
+
+[node name="AcceptButton" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -72.0
+offset_right = 448.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Accept"
+
+[node name="ContinueButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -448.0
+offset_top = -72.0
+offset_right = 448.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "..."
+
+[connection signal="pressed" from="DefyButton" to="." method="_on_defy_button_pressed"]
+[connection signal="pressed" from="AcceptButton" to="." method="_on_procede_button_pressed"]
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]

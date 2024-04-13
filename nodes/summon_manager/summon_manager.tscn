@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://g40ugjrpuus4"]
+
+[ext_resource type="Script" path="res://nodes/summon_manager/summon_manager.gd" id="1_cwova"]
+[ext_resource type="Script" path="res://nodes/dialogue_manager/dialogue_manager.gd" id="2_svbkn"]
+[ext_resource type="PackedScene" uid="uid://crklsgmmmlobx" path="res://nodes/summon_dialogue_ui/summon_dialogue_ui.tscn" id="2_t48ky"]
+
+[node name="SummonManager" type="Node3D"]
+script = ExtResource("1_cwova")
+
+[node name="SummonDialogueUI" parent="." node_paths=PackedStringArray("dialogue_manger") instance=ExtResource("2_t48ky")]
+dialogue_manger = NodePath("../DialogueManager")
+
+[node name="DialogueManager" type="Node" parent="."]
+script = ExtResource("2_svbkn")

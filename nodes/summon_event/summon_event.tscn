@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbk7y724jtocp"]
+
+[ext_resource type="Script" path="res://nodes/summon_event/summon_event.gd" id="1_pwog0"]
+
+[node name="SummonEvent" type="Node3D"]
+script = ExtResource("1_pwog0")

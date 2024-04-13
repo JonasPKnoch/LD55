@@ -11,5 +11,5 @@ config_version=5
 [application]
 
 config/name="LD55"
+run/main_scene="res://levels/test_summon.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"

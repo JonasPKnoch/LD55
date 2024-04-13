@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmsuh17wmrxqp"]
+
+[ext_resource type="PackedScene" uid="uid://g40ugjrpuus4" path="res://nodes/summon_manager/summon_manager.tscn" id="1_24xd3"]
+[ext_resource type="Script" path="res://nodes/summon_event/summon_event.gd" id="2_qvsu8"]
+[ext_resource type="Script" path="res://nodes/dialogue_event/dialogue_event.gd" id="2_wqjdn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_f7shv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n14ak"]
+albedo_color = Color(0.337255, 0.219608, 0.152941, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_obuga"]
+material = SubResource("StandardMaterial3D_n14ak")
+size = Vector2(16, 16)
+
+[sub_resource type="Environment" id="Environment_c2rog"]
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 0.08
+
+[node name="TestSummonScene" type="Node3D"]
+
+[node name="SummonManager" parent="." instance=ExtResource("1_24xd3")]
+
+[node name="SummonEvent" type="Node3D" parent="SummonManager"]
+script = ExtResource("2_qvsu8")
+
+[node name="DialogueEvent" type="Node" parent="SummonManager/SummonEvent"]
+script = ExtResource("2_wqjdn")
+text = "Here is the first step"
+priority = 1
+
+[node name="SummonEvent2" type="Node3D" parent="SummonManager"]
+script = ExtResource("2_qvsu8")
+
+[node name="DialogueEvent2" type="Node" parent="SummonManager/SummonEvent2"]
+script = ExtResource("2_wqjdn")
+text = "Here is the second step"
+priority = 2
+
+[node name="SummonEvent3" type="Node3D" parent="SummonManager"]
+script = ExtResource("2_qvsu8")
+
+[node name="DialogueEvent3" type="Node" parent="SummonManager/SummonEvent3"]
+script = ExtResource("2_wqjdn")
+text = "Here is the 3rd step"
+priority = 3
+
+[node name="SummonEvent4" type="Node3D" parent="SummonManager"]
+script = ExtResource("2_qvsu8")
+
+[node name="DialogueEvent4" type="Node" parent="SummonManager/SummonEvent4"]
+script = ExtResource("2_wqjdn")
+text = "Oh, and here is some step"
+
+[node name="SummonEvent5" type="Node3D" parent="SummonManager"]
+script = ExtResource("2_qvsu8")
+
+[node name="DialogueEvent5" type="Node" parent="SummonManager/SummonEvent5"]
+script = ExtResource("2_wqjdn")
+text = "And now is the second step"
+error = true
+defy_text = "Ah damn, this isn't the second step..."
+priority = 4
+
+[node name="Obj" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.435426, -1.34179)
+mesh = SubResource("BoxMesh_f7shv")
+skeleton = NodePath("../Ground")
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_obuga")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1327, 0)
+light_color = Color(1, 0.847059, 0.447059, 1)
+light_energy = 2.0
+omni_range = 7.04191
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.999999, 0.00133235, 0.000640067, -0.00147737, 0.887051, 0.461668, 4.73334e-05, -0.461669, 0.887052, 0, 2.26999, 2.61539)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_c2rog")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmsuh17wmrxqp"]
+
+[ext_resource type="PackedScene" uid="uid://g40ugjrpuus4" path="res://nodes/summon_manager/summon_manager.tscn" id="1_24xd3"]
+[ext_resource type="Script" path="res://nodes/summon_event/summon_event.gd" id="2_qvsu8"]
+
+[node name="TestSummon" instance=ExtResource("1_24xd3")]
+
+[node name="SummonEvent" type="Node3D" parent="." index="0"]
+script = ExtResource("2_qvsu8")
