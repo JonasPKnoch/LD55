@@ -16,7 +16,6 @@ func _ready():
 	
 	dialogue_ui.start_dialogue()
 
-
 func _on_summon_dialogue_ui_correct_defy(value):
 	pass # Replace with function body.
 
@@ -24,7 +23,6 @@ func _on_summon_dialogue_ui_wrong_defy():
 	current_defy_cooldown = defy_cooldown_length
 	defy_cooldown_length += 1
 	dialogue_ui.set_can_defy(false)
-
 
 func _on_summon_dialogue_ui_accept():
 	if current_defy_cooldown > 0:

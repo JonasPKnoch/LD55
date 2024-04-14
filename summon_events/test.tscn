@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxn0fetrtypj7"]
+
+[ext_resource type="PackedScene" uid="uid://bbk7y724jtocp" path="res://nodes/summon_event/summon_event.tscn" id="1_ykjc7"]
+
+[node name="SummonEvent" instance=ExtResource("1_ykjc7")]
