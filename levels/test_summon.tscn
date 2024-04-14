@@ -31,13 +31,6 @@ text = "Let's begin..."
 refutable = false
 priority = 0
 
-[node name="SummonEvent4" type="Node3D" parent="SummonManager"]
-script = ExtResource("2_qvsu8")
-
-[node name="DialogueEvent4" type="Node" parent="SummonManager/SummonEvent4"]
-script = ExtResource("2_wqjdn")
-text = "Oh, and here is some step"
-
 [node name="SummonEvent3" type="Node3D" parent="SummonManager"]
 script = ExtResource("2_qvsu8")
 
@@ -56,6 +49,13 @@ error = true
 defy_text = "Ah damn, this isn't the second step..."
 priority = 4
 
+[node name="SummonEvent4" type="Node3D" parent="SummonManager"]
+script = ExtResource("2_qvsu8")
+
+[node name="DialogueEvent4" type="Node" parent="SummonManager/SummonEvent4"]
+script = ExtResource("2_wqjdn")
+text = "Oh, and here is some step"
+
 [node name="SummonEvent2" type="Node3D" parent="SummonManager"]
 script = ExtResource("2_qvsu8")
 
@@ -72,10 +72,52 @@ script = ExtResource("2_wqjdn")
 text = "Here is the first step"
 priority = 1
 
-[node name="SummonEvent7" type="Node3D" parent="SummonManager"]
+[node name="SummonEvent8" type="Node3D" parent="SummonManager"]
 script = ExtResource("2_qvsu8")
 
-[node name="DialogueEvent4" type="Node" parent="SummonManager/SummonEvent7"]
+[node name="DialogueEvent4" type="Node" parent="SummonManager/SummonEvent8"]
+script = ExtResource("2_wqjdn")
+text = "Oh, and here is some step"
+
+[node name="SummonEvent9" type="Node3D" parent="SummonManager"]
+script = ExtResource("2_qvsu8")
+
+[node name="DialogueEvent4" type="Node" parent="SummonManager/SummonEvent9"]
+script = ExtResource("2_wqjdn")
+text = "Oh, and here is some step"
+
+[node name="SummonEvent10" type="Node3D" parent="SummonManager"]
+script = ExtResource("2_qvsu8")
+
+[node name="DialogueEvent4" type="Node" parent="SummonManager/SummonEvent10"]
+script = ExtResource("2_wqjdn")
+text = "Oh, and here is some step"
+
+[node name="SummonEvent11" type="Node3D" parent="SummonManager"]
+script = ExtResource("2_qvsu8")
+
+[node name="DialogueEvent4" type="Node" parent="SummonManager/SummonEvent11"]
+script = ExtResource("2_wqjdn")
+text = "Oh, and here is some step"
+
+[node name="SummonEvent12" type="Node3D" parent="SummonManager"]
+script = ExtResource("2_qvsu8")
+
+[node name="DialogueEvent4" type="Node" parent="SummonManager/SummonEvent12"]
+script = ExtResource("2_wqjdn")
+text = "Oh, and here is some step"
+
+[node name="SummonEvent13" type="Node3D" parent="SummonManager"]
+script = ExtResource("2_qvsu8")
+
+[node name="DialogueEvent4" type="Node" parent="SummonManager/SummonEvent13"]
+script = ExtResource("2_wqjdn")
+text = "Oh, and here is some step"
+
+[node name="SummonEventFinal" type="Node3D" parent="SummonManager"]
+script = ExtResource("2_qvsu8")
+
+[node name="DialogueEvent4" type="Node" parent="SummonManager/SummonEventFinal"]
 script = ExtResource("2_wqjdn")
 text = "This concludes the ritual"
 refutable = false

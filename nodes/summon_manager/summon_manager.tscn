@@ -13,3 +13,7 @@ dialogue_manger = NodePath("../DialogueManager")
 
 [node name="DialogueManager" type="Node" parent="."]
 script = ExtResource("2_svbkn")
+
+[connection signal="accept" from="SummonDialogueUI" to="." method="_on_summon_dialogue_ui_accept"]
+[connection signal="correct_defy" from="SummonDialogueUI" to="." method="_on_summon_dialogue_ui_correct_defy"]
+[connection signal="wrong_defy" from="SummonDialogueUI" to="." method="_on_summon_dialogue_ui_wrong_defy"]
