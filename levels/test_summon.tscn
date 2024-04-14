@@ -22,21 +22,21 @@ fog_density = 0.08
 
 [node name="SummonManager" parent="." instance=ExtResource("1_24xd3")]
 
-[node name="SummonEvent" type="Node3D" parent="SummonManager"]
+[node name="SummonEvent6" type="Node3D" parent="SummonManager"]
 script = ExtResource("2_qvsu8")
 
-[node name="DialogueEvent" type="Node" parent="SummonManager/SummonEvent"]
+[node name="DialogueEvent4" type="Node" parent="SummonManager/SummonEvent6"]
 script = ExtResource("2_wqjdn")
-text = "Here is the first step"
-priority = 1
+text = "Let's begin..."
+refutable = false
+priority = 0
 
-[node name="SummonEvent2" type="Node3D" parent="SummonManager"]
+[node name="SummonEvent4" type="Node3D" parent="SummonManager"]
 script = ExtResource("2_qvsu8")
 
-[node name="DialogueEvent2" type="Node" parent="SummonManager/SummonEvent2"]
+[node name="DialogueEvent4" type="Node" parent="SummonManager/SummonEvent4"]
 script = ExtResource("2_wqjdn")
-text = "Here is the second step"
-priority = 2
+text = "Oh, and here is some step"
 
 [node name="SummonEvent3" type="Node3D" parent="SummonManager"]
 script = ExtResource("2_qvsu8")
@@ -45,13 +45,6 @@ script = ExtResource("2_qvsu8")
 script = ExtResource("2_wqjdn")
 text = "Here is the 3rd step"
 priority = 3
-
-[node name="SummonEvent4" type="Node3D" parent="SummonManager"]
-script = ExtResource("2_qvsu8")
-
-[node name="DialogueEvent4" type="Node" parent="SummonManager/SummonEvent4"]
-script = ExtResource("2_wqjdn")
-text = "Oh, and here is some step"
 
 [node name="SummonEvent5" type="Node3D" parent="SummonManager"]
 script = ExtResource("2_qvsu8")
@@ -62,6 +55,31 @@ text = "And now is the second step"
 error = true
 defy_text = "Ah damn, this isn't the second step..."
 priority = 4
+
+[node name="SummonEvent2" type="Node3D" parent="SummonManager"]
+script = ExtResource("2_qvsu8")
+
+[node name="DialogueEvent2" type="Node" parent="SummonManager/SummonEvent2"]
+script = ExtResource("2_wqjdn")
+text = "Here is the second step"
+priority = 2
+
+[node name="SummonEvent" type="Node3D" parent="SummonManager"]
+script = ExtResource("2_qvsu8")
+
+[node name="DialogueEvent" type="Node" parent="SummonManager/SummonEvent"]
+script = ExtResource("2_wqjdn")
+text = "Here is the first step"
+priority = 1
+
+[node name="SummonEvent7" type="Node3D" parent="SummonManager"]
+script = ExtResource("2_qvsu8")
+
+[node name="DialogueEvent4" type="Node" parent="SummonManager/SummonEvent7"]
+script = ExtResource("2_wqjdn")
+text = "This concludes the ritual"
+refutable = false
+priority = 6
 
 [node name="Obj" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.435426, -1.34179)

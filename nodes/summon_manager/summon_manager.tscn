@@ -8,6 +8,7 @@
 script = ExtResource("1_cwova")
 
 [node name="SummonDialogueUI" parent="." node_paths=PackedStringArray("dialogue_manger") instance=ExtResource("2_t48ky")]
+visible = false
 dialogue_manger = NodePath("../DialogueManager")
 
 [node name="DialogueManager" type="Node" parent="."]

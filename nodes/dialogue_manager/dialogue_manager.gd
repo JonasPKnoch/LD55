@@ -3,7 +3,7 @@ extends Node
 class_name DialogueManager
 
 var dialogue_events: Array[DialogueEvent]
-var dialogue_index: int = -1
+var dialogue_index: int = 0
 
 func get_dialogue_events(summon_event: SummonEvent):
 	var children =  summon_event.get_children()

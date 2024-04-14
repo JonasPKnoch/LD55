@@ -9,9 +9,21 @@ class_name SummonDialogue
 
 @export var dialogue_manger: DialogueManager
 
+func start_dialogue():
+	visible = true
+	dialogue_text.text = dialogue_manger.get_current_dialogue().text
+	set_continue_enabled(!dialogue_manger.get_current_dialogue().refutable)
+
+func end_dialogue():
+	visible = false
+
 func _on_procede_button_pressed():
 	dialogue_manger.progress_dialogue()
+	if dialogue_manger.dialogue_finished():
+		end_dialogue()
+		return
 	dialogue_text.text = dialogue_manger.get_current_dialogue().text
+	set_continue_enabled(!dialogue_manger.get_current_dialogue().refutable)
 
 func _on_defy_button_pressed():
 	dialogue_text.text = dialogue_manger.get_current_dialogue().defy_text
